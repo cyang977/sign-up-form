@@ -20,42 +20,44 @@
             <p class="second"></p>
         </div>
         <div class="right-middle">
-            <h1 class="form-header">Lets Do This!</h1>
+            <h1 class="form-header">Sign Up!</h1>
             <form>
                 <div class="top">
                     <div class="top-inside one">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="first-name" class="input">
+                        <input type="text" id="first-name" class="input" minlength="2" size="25" required>
                     </div>
                     <div class="top-inside two">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name" class="input">
+                        <input type="text" id="last-name" class="input" minlength="2" size="25" required>
                     </div>
                 </div>
                 <div class="middle">    
                     <div class="middle-inside one">
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" class="input">
+                        <input type="email" id="email" class="input" size="25">
                     </div>    
                     <div class="middle-inside two">    
                         <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" id="phone-number" class="input">
+                        <input type="tel" id="phone-number" class="input" size="25">
                     </div>
                 </div>
                 <div class="bottom">    
                     <div class="bottom-inside one">
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" class="input">
+                        <input type="password" id="password" class="input" size="25" required>
                     </div>    
                     <div class="bottom-inside two">    
                         <label for="confirm">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm" class="input">
+                        <input type="password" id="confirm" class="input" size="25" required>
                     </div>
                 </div>    
             </form>
+            <hr>
+        </div>
+        <div class="right-bottom">
             <button>Create Account</button>
         </div>
-        <div class="right-bottom"></div>
     </div>
 </body>
 </html>
