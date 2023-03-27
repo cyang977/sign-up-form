@@ -1,27 +1,63 @@
 body {
     display: flex;
     height: 100vh;
-
+    width: 100%;
+    margin: 0;
+    --valid-color: lightgreen;
+    --invalid-color: red;
+    --bg-left-color: gray;
+    --bg-right-color: #FAFAFA;
 }
 
 .left {
     height: 100%;
-    width: 30%;
-    background-color: aquamarine;
+    width: 40%;
+    background-color: var(--bg-left-color, red);
 }
 
 .right {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 60%;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
 }
 
+.form-header {
+    padding-left: 50px;
+}
+.right-top {
+    background-color: #FAFAFA;
+    height: 200px;
+    width: 100%;
+    margin-top: 0;
+}
 .right-middle {
     width: 100%;
-    margin-left: 30px;
+    margin-top: 0;
+}
+
+hr {
+    height: 2px;
+    background-color: #D3D3D3;
+    border: none;
+    margin-top: 50px;
+}
+
+.right-bottom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 100px;
+}
+
+button {
+    padding: 10px 20px 10px 20px;
+    margin-left: 50px;
+    background-color: aqua;
+    border-radius: 20px;
 }
 
 .top {
@@ -30,7 +66,8 @@ body {
     align-items: center;
     margin-bottom: 20px;
     height: 40px;
-
+    width: 600px;
+    margin-left: 50px;
 }
 
 .one,
@@ -40,10 +77,15 @@ body {
 }
 
 .input {
-    margin-right: 200px;
-    height: 1.5em;
-    border: 1px solid lightgrey;
+    height: 1.75em;
+    border-color: lightgray;
     border-radius: 3px;
+}
+
+label {
+    color: gray;
+    font-weight: bold;
+    font-size: .75em;
 }
 
 .middle {
@@ -52,6 +94,8 @@ body {
     align-items: center;
     height: 40px;
     margin-bottom: 20px;
+    width: 600px;
+    margin-left: 50px;
 }
 
 .bottom {
@@ -59,5 +103,19 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    margin-bottom: 20px;
+    width: 600px;
+    margin-left: 50px;
+}
+
+.input[type='email']:invalid {
+    border: 2px solid var(--invalid-color, yellow);
+}
+
+
+.input[type='text']:valid {
+    border: 2px solid var(--valid-color, purple);
+}
+
+.input[type='password']:valid {
+    border: 2px solid var(--valid-color, purple);
 }
