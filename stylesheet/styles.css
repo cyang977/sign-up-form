@@ -7,6 +7,8 @@ body {
     --invalid-color: red;
     --bg-left-color: gray;
     --bg-right-color: #FAFAFA;
+    --font-style: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .left {
@@ -31,8 +33,7 @@ body {
     position: absolute;
     text-align: center;
     background: rgba(5, 5, 5, .6);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #dedede;
+    font-family: var(--font-style, sans-serif);
     letter-spacing: 1em;
 }
 img {
@@ -46,9 +47,17 @@ img {
     flex-direction: column;
     height: 100%;
     width: 100%;
-    justify-content: space-between;
     align-items: center;
     background-color: #FAFAFA;
+}
+
+.first {
+    margin-top: 80px;
+    width: 600px;
+    margin-left: 50px;
+    font-family: var(--font-style, sans-serif);
+    font-size: 1.1em;
+    letter-spacing: 3px;
 }
 
 .form-header {
@@ -56,6 +65,8 @@ img {
     font-size: 24px;
 }
 .right-top {
+    display: flex;
+    align-items: center;
     background-color: #FAFAFA;
     height: 200px;
     width: 100%;
@@ -70,19 +81,34 @@ img {
 
 .right-bottom {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 100px;
-    margin-bottom: 100px;
+    height: 175px;
 }
 
 button {
-    padding: 10px 20px 10px 20px;
+    width: 150px;
+    padding: 12px 20px 12px 20px;
     margin-left: 50px;
     background-color: #202020;
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
 }
+
+.log-in {
+    margin-left: 50px;
+    width: 250px;
+    font-family: var(--font-style, sans-serif);
+}
+
+a {
+    color: teal;
+}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
 .top {
     display: flex;
@@ -131,7 +157,7 @@ label {
     height: 40px;
     width: 600px;
     margin-left: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .input[type='email']:invalid {
